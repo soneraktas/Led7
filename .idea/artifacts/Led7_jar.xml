@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="Led7:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Led7_jar</output-path>
+    <root id="archive" name="Led7.jar">
+      <element id="module-output" name="Led7" />
+      <element id="extracted-dir" path="$USER_HOME$/yapayZekaYazismalarim02/pi4j-4.0.1/lib/pi4j-library-linuxfs.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/yapayZekaYazismalarim02/pi4j-4.0.1/lib/pi4j-library-pigpio.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/yapayZekaYazismalarim02/pi4j-4.0.1/lib/pi4j-core.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/yapayZekaYazismalarim02/pi4j-4.0.1/lib/pi4j-library-gpiod.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/yapayZekaYazismalarim02/pi4j-4.0.1/lib/pi4j-plugin-ffm.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/yapayZekaYazismalarim02/pi4j-4.0.1/lib/pi4j-plugin-gpiod.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/yapayZekaYazismalarim02/pi4j-4.0.1/lib/pi4j-plugin-linuxfs.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/yapayZekaYazismalarim02/pi4j-4.0.1/lib/pi4j-plugin-pigpio.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/yapayZekaYazismalarim02/pi4j-4.0.1/lib/pi4j-plugin-raspberrypi.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/yapayZekaYazismalarim02/pi4j-4.0.1/lib/slf4j-api.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/yapayZekaYazismalarim02/pi4j-4.0.1/lib/slf4j-simple.jar" path-in-jar="/" />
+      <element id="module-source" name="Led7" />
+      <element id="library" level="project" name="pi4j-core" />
+    </root>
+  </artifact>
+</component>
