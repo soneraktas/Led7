@@ -5,7 +5,10 @@ import com.pi4j.io.gpio.digital.DigitalState;
 
 public class Main {
 
-    @SuppressWarnings("removal") // address() metodundaki deprecated uyarısını susturur
+    //@SuppressWarnings("removal") // address() metodundaki deprecated uyarısını susturur
+    // GEREK KALMADI CLAOUD Aİ İŞİ ÇÖZDÜKTEN SONRA address yerine bcm kullandık
+    // SORUNUN ÇÖZÜMÜ İÇİN DOWNLOAD ETTİĞİM 4.0.1 AJR DAKİ KAYNAK source.jara bakarak işi çözdü
+    // online dökümantasyon hala an itibariyle eksik
     public static void main() {
         // BCM Pinleri: 26, 19, 13, 6, 22, 27, 17
         int[] LED_PINS = {26, 19, 13, 6, 22, 27, 17};
@@ -19,7 +22,7 @@ public class Main {
             var config1 = DigitalOutput.newConfigBuilder(pi4j)
                     .id("led_" + LED_PINS[0])
                     .name("LED Pin " + LED_PINS[0])
-                    .address(LED_PINS[0])
+                    .bcm(LED_PINS[0])
                     .shutdown(DigitalState.LOW)// Uygulama kapanış güvenliği
                     .initial(DigitalState.LOW) // İlk açılış güvenliği
                     .build();
@@ -35,7 +38,7 @@ public class Main {
             var config2 = DigitalOutput.newConfigBuilder(pi4j)
                     .id("led_" + LED_PINS[1])
                     .name("LED Pin " + LED_PINS[1])
-                    .address(LED_PINS[1])
+                    .bcm(LED_PINS[1])
                     .shutdown(DigitalState.LOW)// Uygulama kapanış güvenliği
                     .initial(DigitalState.LOW) // İlk açılış güvenliği
                     .build();
@@ -51,7 +54,7 @@ public class Main {
             var config3 = DigitalOutput.newConfigBuilder(pi4j)
                     .id("led_" + LED_PINS[2])
                     .name("LED Pin " + LED_PINS[2])
-                    .address(LED_PINS[2])
+                    .bcm(LED_PINS[2])
                     .shutdown(DigitalState.LOW)// Uygulama kapanış güvenliği
                     .initial(DigitalState.LOW) // İlk açılış güvenliği
                     .build();
@@ -67,7 +70,7 @@ public class Main {
             var config4 = DigitalOutput.newConfigBuilder(pi4j)
                     .id("led_" + LED_PINS[3])
                     .name("LED Pin " + LED_PINS[3])
-                    .address(LED_PINS[3])
+                    .bcm(LED_PINS[3])
                     .shutdown(DigitalState.LOW)// Uygulama kapanış güvenliği
                     .initial(DigitalState.LOW) // İlk açılış güvenliği
                     .build();
@@ -83,7 +86,7 @@ public class Main {
             var config5 = DigitalOutput.newConfigBuilder(pi4j)
                     .id("led_" + LED_PINS[4])
                     .name("LED Pin " + LED_PINS[4])
-                    .address(LED_PINS[4])
+                    .bcm(LED_PINS[4])
                     .shutdown(DigitalState.LOW)// Uygulama kapanış güvenliği
                     .initial(DigitalState.LOW) // İlk açılış güvenliği
                     .build();
@@ -99,7 +102,7 @@ public class Main {
             var config6 = DigitalOutput.newConfigBuilder(pi4j)
                     .id("led_" + LED_PINS[5])
                     .name("LED Pin " + LED_PINS[5])
-                    .address(LED_PINS[5])
+                    .bcm(LED_PINS[5])
                     .shutdown(DigitalState.LOW)// Uygulama kapanış güvenliği
                     .initial(DigitalState.LOW) // İlk açılış güvenliği
                     .build();
@@ -115,7 +118,7 @@ public class Main {
             var config7 = DigitalOutput.newConfigBuilder(pi4j)
                     .id("led_" + LED_PINS[6])
                     .name("LED Pin " + LED_PINS[6])
-                    .address(LED_PINS[6])
+                    .bcm(LED_PINS[6])
                     .shutdown(DigitalState.LOW)// Uygulama kapanış güvenliği
                     .initial(DigitalState.LOW) // İlk açılış güvenliği
                     .build();
