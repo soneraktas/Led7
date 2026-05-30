@@ -10,9 +10,6 @@ public class Main {
         // BCM Pinleri: 26, 19, 13, 6, 22, 27, 17
         int[] LED_PINS = {26, 19, 13, 6, 22, 27, 17};
 
-        // DigitalOutput OLACAK pinleri saklamak için dizi
-        DigitalOutput[] kablolar = new DigitalOutput[LED_PINS.length];
-
         Context pi4j = null;
         System.out.println("V4.0.1 ile 7 LED sistemi başlatılıyor...");
         try {
@@ -27,10 +24,9 @@ public class Main {
                     .initial(DigitalState.LOW) // İlk açılış güvenliği
                     .build();
 
-            //mor kabloya bağlı pini DIGITAL OUTPUT YAP ( BCM 26 )
-            kablolar[0] = pi4j.create(config1);
-            //diğital output olarak yapılandırdığımız bcm26 adresli pini high yapalım
-            kablolar[0].high();
+            DigitalOutput morKablo = pi4j.create(config1);
+            //diğital output olarak yapılandırdığımız ( BCM 26 ) adresli pini high yapalım
+            morKablo.high();
             // ------------------------------------------------------------------------------------------
 
 
@@ -44,10 +40,9 @@ public class Main {
                     .initial(DigitalState.LOW) // İlk açılış güvenliği
                     .build();
 
-            //mavi kabloya bağlı pini DIGITAL OUTPUT YAP ( BCM 19 )
-            kablolar[1] = pi4j.create(config2);
-            //diğital output olarak yapılandırdığımız bcm19 adresli pini high yapalım
-            kablolar[1].high();
+            DigitalOutput maviKablo = pi4j.create(config2);
+            //diğital output olarak yapılandırdığımız ( BCM 19 ) adresli pini high yapalım
+            maviKablo.high();
             // ------------------------------------------------------------------------------------------
 
 
@@ -61,10 +56,9 @@ public class Main {
                     .initial(DigitalState.LOW) // İlk açılış güvenliği
                     .build();
 
-            //yeşil kabloya bağlı pini DIGITAL OUTPUT YAP ( BCM 13 )
-            kablolar[2] = pi4j.create(config3);
-            //diğital output olarak yapılandırdığımız bcm13 adresli pini high yapalım
-            kablolar[2].high();
+            DigitalOutput yesilKablo = pi4j.create(config3);
+            //diğital output olarak yapılandırdığımız ( BCM 13 ) adresli pini high yapalım
+            yesilKablo.high();
             // ------------------------------------------------------------------------------------------
 
 
@@ -78,10 +72,9 @@ public class Main {
                     .initial(DigitalState.LOW) // İlk açılış güvenliği
                     .build();
 
-            //sarı kabloya bağlı pini DIGITAL OUTPUT YAP ( BCM 6 )
-            kablolar[3] = pi4j.create(config4);
-            //diğital output olarak yapılandırdığımız bcm6 adresli pini high yapalım
-            kablolar[3].high();
+            DigitalOutput sariKablo = pi4j.create(config4);
+            //diğital output olarak yapılandırdığımız ( BCM 6 ) adresli pini high yapalım
+            sariKablo.high();
             // ------------------------------------------------------------------------------------------
 
 
@@ -95,11 +88,11 @@ public class Main {
                     .initial(DigitalState.LOW) // İlk açılış güvenliği
                     .build();
 
-            //turuncu kabloya bağlı pini DIGITAL OUTPUT YAP ( BCM 22 )
-            kablolar[4] = pi4j.create(config5);
-            //diğital output olarak yapılandırdığımız bcm22 adresli pini high yapalım
-            kablolar[4].high();
+            DigitalOutput turuncuKablo = pi4j.create(config5);
+            //diğital output olarak yapılandırdığımız ( BCM 22 ) adresli pini high yapalım
+            turuncuKablo.high();
             // ------------------------------------------------------------------------------------------
+
 
 
             // Pini yapılandır ve oluştur
@@ -111,10 +104,9 @@ public class Main {
                     .initial(DigitalState.LOW) // İlk açılış güvenliği
                     .build();
 
-            //kırmızı kabloya bağlı pini DIGITAL OUTPUT YAP ( BCM 27 )
-            kablolar[5] = pi4j.create(config6);
-            //diğital output olarak yapılandırdığımız bcm27 adresli pini high yapalım
-            kablolar[5].high();
+            DigitalOutput kirmiziKablo = pi4j.create(config6);
+            //diğital output olarak yapılandırdığımız ( BCM 27 ) adresli pini high yapalım
+            kirmiziKablo.high();
             // ------------------------------------------------------------------------------------------
 
 
@@ -128,10 +120,9 @@ public class Main {
                     .initial(DigitalState.LOW) // İlk açılış güvenliği
                     .build();
 
-            //kahve kabloya bağlı pini DIGITAL OUTPUT YAP ( BCM 17 )
-            kablolar[6] = pi4j.create(config7);
-            //diğital output olarak yapılandırdığımız bcm17 adresli pini high yapalım
-            kablolar[6].high();
+            DigitalOutput kahveKablo = pi4j.create(config7);
+            //diğital output olarak yapılandırdığımız ( BCM 17 ) adresli pini high yapalım
+            kahveKablo.high();
             // ------------------------------------------------------------------------------------------
 
             System.out.println("Program çalışıyor. Kapatmak için ENTER'a bas...");
